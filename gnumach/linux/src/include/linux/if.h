@@ -19,7 +19,8 @@
 #ifndef _LINUX_IF_H
 #define _LINUX_IF_H
 
-#include <linux/types.h>		/* for "caddr_t" et al		*/
+#include <types.h> // Now caddr_t is enable
+//#include <linux/types.h>		/* for "caddr_t" et al		*/
 #include <linux/socket.h>		/* for "struct sockaddr" et al	*/
 
 /* Standard interface flags. */

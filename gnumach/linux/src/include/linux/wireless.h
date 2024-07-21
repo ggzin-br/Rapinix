@@ -50,7 +50,7 @@
 
 /***************************** INCLUDES *****************************/
 
-#include <linux/types.h>		/* for "caddr_t" et al		*/
+//#include <linux/types.h>		/* for "caddr_t" et al		*/
 #include <linux/socket.h>		/* for "struct sockaddr" et al	*/
 #include <linux/if.h>			/* for IFNAMSIZ and co... */
 
@@ -292,7 +292,7 @@ struct	iw_param
  */
 struct	iw_point
 {
-  caddr_t	pointer;	/* Pointer to the data  (in user space) */
+  char*		pointer;	/* Pointer to the data  (in user space) */
   __u16		length;		/* number of fields or size in bytes */
   __u16		flags;		/* Optional params */
 };

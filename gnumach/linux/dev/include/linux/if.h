@@ -19,7 +19,7 @@
 #ifndef _LINUX_IF_H
 #define _LINUX_IF_H
 
-#include <linux/types.h>		/* for "caddr_t" et al		*/
+//#include <linux/types.h>		/* for "caddr_t" et al		*/
 #include <linux/socket.h>		/* for "struct sockaddr" et al	*/
 
 /* Standard interface flags. */
@@ -145,7 +145,7 @@ struct ifreq
 		int	ifru_mtu;
 		struct  ifmap ifru_map;
 		char	ifru_slave[IFNAMSIZ];	/* Just fits the size */
-		caddr_t	ifru_data;
+		char*	ifru_data;
 	} ifr_ifru;
 };
 
@@ -174,7 +174,7 @@ struct ifconf
 	int	ifc_len;			/* size of buffer	*/
 	union 
 	{
-		caddr_t	ifcu_buf;
+		char*	ifcu_buf;
 		struct	ifreq *ifcu_req;
 	} ifc_ifcu;
 };
